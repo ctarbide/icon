@@ -8,9 +8,9 @@ All:	Ilib Ibin
 
 Ilib:	cfuncs/libcfunc.so
 cfuncs/libcfunc.so:  ../bin/icont
-	cp incl/*.icn gincl/*.icn cfuncs/icall.h ../lib
-	cd procs;  LPATH= ../../bin/icont -usc *.icn; mv *.u? ../../lib
-	cd gprocs; LPATH= ../../bin/icont -usc *.icn; mv *.u? ../../lib
+	cp incl/*.icn gincl/*.icn cfuncs/icall.h ../lib/icon
+	cd procs;  LPATH= ../../bin/icont -usc *.icn; mv *.u? ../../lib/icon
+	cd gprocs; LPATH= ../../bin/icont -usc *.icn; mv *.u? ../../lib/icon
 	if grep '^ *# *define LoadFunc' ../src/h/define.h >/dev/null; \
 	   then $(MAKE) Cfunctions; fi
 
@@ -19,13 +19,13 @@ cfuncs/libcfunc.so:  ../bin/icont
 
 Cfunctions:
 	cd cfuncs; LPATH= $(MAKE) ICONT=../../bin/icont
-	cp cfuncs/*.u? ../lib
+	cp cfuncs/*.u? ../lib/icon
 	rm -f ../bin/libcfunc.so
 	cp cfuncs/libcfunc.so ../bin
 
 
 #  Make selected graphics program binaries (platform-dependent icode)
-#  for ../bin, given that ../lib is ready
+#  for ../bin, given that ../lib/icon is ready
 
 Ibin:	gpacks/vib/vib
 gpacks/vib/vib:  ../bin/icont
@@ -33,7 +33,7 @@ gpacks/vib/vib:  ../bin/icont
 
 
 #  Make a full set of program binaries (not usually done) in ./iexe,
-#  given that ../lib is ready
+#  given that ../lib/icon is ready
 
 Iexe:
 	rm -f iexe/*

@@ -300,7 +300,7 @@ static char *libpath(char *prog, char *envname) {
    else
       strcpy(buf, ".");
    strcat(buf, ":");
-   strcat(buf, relfile(prog, "/../../lib"));
+   strcat(buf, relfile(prog, "/../../lib/icon"));
    return salloc(buf);
    }
 

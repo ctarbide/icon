@@ -1,3 +1,19 @@
+
+This branch only move 'lib/*' to 'lib/icon/*', to install it I simple
+run:
+
+    make Configure name=linux_musl
+    make
+    make Install dest=icon-package
+
+Then move files inside 'icon-package/' to the intended prefix.
+
+Canonical location for this branch is [1].
+
+- [1]: https://github.com/ctarbide/icon/tree/prefix-lib-icon
+
+****************************************************************
+
 README file for the Icon Programming Language source tree
 https://github.com/gtownsend/icon
 

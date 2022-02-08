@@ -89,13 +89,14 @@ Ibin:		bin/icont
 D=$(dest)
 Install:
 		mkdir $D
-		mkdir $D/bin $D/lib $D/doc $D/man $D/man/man1
+		mkdir $D/bin $D/lib $D/doc $D/man
+		mkdir $D/lib/icon $D/man/man1
 		cp README $D
 		cp bin/[cflpvwx]* $D/bin
 		cp bin/icon[tx]* $D/bin
 		rm -f $D/bin/libI*
 		(cd $D/bin; ln -s icont icon)
-		cp lib/*.* $D/lib
+		cp lib/icon/*.* $D/lib/icon
 		cp doc/*.* $D/doc
 		cp man/man1/*.* $D/man/man1
 
@@ -147,7 +148,7 @@ Pure:
 		touch Makedefs
 		rm -rf icon-*
 		rm -rf bin/[abcdefghijklmnopqrstuvwxyz]*
-		rm -rf lib/[abcdefghijklmnopqrstuvwxyz]*
+		rm -rf lib/icon/[abcdefghijklmnopqrstuvwxyz]*
 		cd ipl;			$(MAKE) Pure
 		cd src;			$(MAKE) Pure
 		cd tests;		$(MAKE) Pure
