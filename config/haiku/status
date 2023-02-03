@@ -1,0 +1,32 @@
+System configuration:
+
+	Haiku
+
+Latest Icon version:
+
+	Version 9.5.22e of July 23, 2022
+
+Installer:
+
+	Jason Martin <agrellum@gmail.com>
+
+Missing features:
+
+	None
+
+Known bugs:
+
+	The graphics implementation depends on xlibe.
+	Some esoteric operations such as pattern fill
+	and reverse mode drawing do not work.
+
+Comments:
+
+	To build with graphics enabled, first install needed packages:
+		pkgman install devel:libx11 devel:libxt devel:libxpm
+
+	Tested on Haiku Nightly hrev56253
+
+Date:
+
+	July 23, 2022

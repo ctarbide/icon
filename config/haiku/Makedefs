@@ -7,9 +7,9 @@
 #  XLIBS    libraries to link for graphics
 
 CC = gcc
-CFLAGS = -O
+CFLAGS = -O -I/boot/system/develop/headers/X11
 CFDYN = -fPIC
-RLINK = -Wl,-E
-RLIBS = -lm -ldl
+RLINK = -Wl,--no-undefined
+RLIBS = -lnetwork
 TLIBS = -lpthread
-XLIBS = -lXpm -lX11
+XLIBS =  -lXpm -lX11

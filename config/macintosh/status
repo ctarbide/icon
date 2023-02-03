@@ -4,7 +4,7 @@ System configuration:
 
 Latest Icon version:
 
-	Version 9.5.20g of July 24, 2020
+	Version 9.5.22e of July 23, 2022
 
 Installer:
 
@@ -22,7 +22,8 @@ Known bugs:
 
 Comments:
 
-	Tested with MacOS Catalina 10.15.6 and Apple clang 11.0.3.
+	Tested with MacOS Ventura 13.2 on Apple M1 Mac mini.
+	Tested with MacOS Monterey 12.4 on both Intel and Apple (M1) silicon.
 
 	See the special Macintosh page in the documentation directory.
 
@@ -33,4 +34,4 @@ Comments:
 
 Date:
 
-	July 24, 2020
+	January 27, 2023
