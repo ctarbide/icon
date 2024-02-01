@@ -150,7 +150,6 @@ function{0,1} open(fname, spec)
       register char *s;
       int status;
       char mode[4];
-      extern FILE *fopen();
       FILE *f;
       struct b_file *fl;
 
@@ -689,7 +688,7 @@ function{0,1} where(f)
 
    body {
       FILE *fd;
-      long ftell();
+      long ftell(FILE*);
       long pos;
 
       fd = BlkLoc(f)->file.fd;

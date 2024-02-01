@@ -75,7 +75,6 @@ void		drunerr		(int n, double v);
 void		dumpact		(struct b_coexpr *ce);
 void		env_int	(char *name,word *variable,int non_neg, uword limit);
 int		equiv		(dptr dp1,dptr dp2);
-int		err		(void);
 void		err_msg		(int n, dptr v);
 void		error		(char *s1, char *s2);
 void		fatalerr	(int n,dptr v);
@@ -137,6 +136,7 @@ word		bigradix	(int sign, int r, char *s, char *x,
 						   union numeric *result);
 int		bigtoreal	(dptr da, double *result);
 int		realtobig	(dptr da, dptr dx);
+int     	doubletobig	(double x, dptr dx);
 int		bigtos		(dptr da, dptr dx);
 void		bigprint	(FILE *f, dptr da);
 int		cpbignum	(dptr da, dptr db);
