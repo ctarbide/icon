@@ -732,7 +732,7 @@ static struct il_code *abstrcomp(struct node *n,
    switch (n->nd_id) {
       case PrefxNd:
          switch (t->tok_id) {
-            case TokType:
+            case Type:
                /*
                 * type( <variable> )
                 */
@@ -1798,7 +1798,7 @@ static int strct_typ(struct node *typ, int *is_reg)
          case Extern:
             errt2(typ->tok, "declare {...} should not contain ",
                typ->tok->image);
-         case TokRegister:
+         case Register:
             *is_reg = 1;
             return 0;
          case TypeDefName:

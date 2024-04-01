@@ -396,10 +396,10 @@ static long equality(struct token **tp, struct token *trigger)
 
    e1 = relation(tp, trigger);
    tok_id = (*tp)->tok_id;
-   while (tok_id == TokEqual || tok_id == Neq) {
+   while (tok_id == Equal || tok_id == Neq) {
       advance_tok(tp);
       e2 = relation(tp, trigger);
-      if (tok_id == TokEqual)
+      if (tok_id == Equal)
          e1 = (e1 == e2);
       else
          e1 = (e1 != e2);

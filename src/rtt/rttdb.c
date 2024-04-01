@@ -1187,7 +1187,7 @@ void impl_fnc(struct token *name)
     * Set the global operation type for later use. If this is a
     *  new function update the number of them.
     */
-   op_type = TokFunction;
+   op_type = Function;
    num_fnc = set_impl(name, bhash, num_fnc, fnc_pre);
    }
 
@@ -1229,7 +1229,7 @@ static int set_impl(struct token *name, struct implement **tbl,
       ptr = NewStruct(implement);
       hashval = IHasher(name_s);
       ptr->blink = tbl[hashval];
-      ptr->oper_typ = ((op_type == TokFunction) ? 'F' : 'K');
+      ptr->oper_typ = ((op_type == Function) ? 'F' : 'K');
       nxt_pre(ptr->prefix, pre, 2);    /* allocate a unique prefix */
       ptr->name = name_s;
       ptr->op = NULL;
