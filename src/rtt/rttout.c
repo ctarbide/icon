@@ -1451,7 +1451,7 @@ int c_walk(struct node *n, int indent, int brace)
                   prt_str("}", indent);
                   }
                return 1;
-            case TokEnum:
+            case Enum:
                /*
                 * enum <ident>
                 * enum <opt-ident> { <enum-list> }
@@ -3222,7 +3222,7 @@ static void comp_def(struct node *n)
     * In several contexts, letters are used to distinguish kinds of operations.
     */
    switch (op_type) {
-      case TokFunction:
+      case Function:
          lc_letter = 'f';
          uc_letter = 'F';
          break;
@@ -3405,7 +3405,7 @@ static void interp_def(struct node *n)
     * Determine what letter is used to prefix the operation name.
     */
    switch (op_type) {
-      case TokFunction:
+      case Function:
          letter = 'Z';
          break;
       case Keyword:
@@ -3431,7 +3431,7 @@ static void interp_def(struct node *n)
        * Output procedure block.
        */
       switch (op_type) {
-         case TokFunction:
+         case Function:
             fprintf(out_file, "FncBlock(%s, %d, %d)\n\n", name, nparms,
                (has_underef ? -1 : 0));
             ++line;

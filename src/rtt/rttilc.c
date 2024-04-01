@@ -694,7 +694,7 @@ static void ilc_walk(struct node *n, int may_mod, int const_cast)
                break;
             case Struct:
             case Union:
-            case TokEnum:
+            case Enum:
                /*
                 * <struct-union-enum> <identifier>
                 * <struct-union-enum> { <component-list> }
@@ -1322,7 +1322,7 @@ void just_type(struct node *typ, int indent, int ilc)
          case Extern:
          case Static:
          case Auto:
-         case TokRegister:
+         case Register:
          case Const:
          case Volatile:
             return;         /* Don't output these declaration elements */

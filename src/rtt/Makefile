@@ -70,16 +70,8 @@ gettok.o: $(PP_DIR)gettok.c $(P_DOT_H)
 pinit.o: $(PP_DIR)pinit.c $(P_DOT_H)
 	$(CC) -c $(CFLAGS) $(PP_DIR)pinit.c
 
-#
-# The following entry is commented out because it is not normally
-# necessary to recreate rttparse.c and ltoken.h unless the grammar
-# in rttgram.y for the run-time langauge is changed. Recreating these
-# files is not normally a part of the installation process. Note that
-# on some systems, yacc may not have large enough internal tables to
-# translate this grammar.
-#
-#rttparse.c ltoken.h: rttgram.y
-#	yacc -d rttgram.y
-#	fgrep -v -x "extern char *malloc(), *realloc();" y.tab.c > rttparse.c
-#	rm y.tab.c
-#	mv y.tab.h ltoken.h
+rttparse.c ltoken.h: rttgram.y
+	yacc -d rttgram.y
+	fgrep -v -x "extern char *malloc(), *realloc();" y.tab.c > rttparse.c
+	rm y.tab.c
+	mv y.tab.h ltoken.h

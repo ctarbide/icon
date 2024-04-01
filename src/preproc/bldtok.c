@@ -623,7 +623,7 @@ struct token *tokenize()
              */
             AppChar(tknize_sbuf, '=');
             AdvChar();
-            return new_token(TokEqual, str_install(&tknize_sbuf), fname, line);
+            return new_token(Equal, str_install(&tknize_sbuf), fname, line);
             }
          else
             return new_token('=', str_install(&tknize_sbuf), fname, line);
