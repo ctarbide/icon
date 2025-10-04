@@ -1,15 +1,14 @@
 System configuration:
 
-	Intel architecture running the GNU system
+	GNU Hurd system on any hardware platform
 
 Latest Icon version:
 
-	Version 9.4.0
+	Version 9.5.25a
 
 Installer:
 
-	Marcus Brinkmann
-	The Debian project
+	Pino Toscano (github.com/pinotree)
 
 Missing features:
 
@@ -21,8 +20,8 @@ Known bugs:
 
 Comments:
 
-	Tested under Debian GNU/Hurd.
+	None
 
 Date:
 
-	August 9, 2001
+	September 21, 2025
